@@ -115,8 +115,8 @@ class HierarchicalAffineCouplingBlock(nn.Module):
                                                    c_internal=c_internal,
                                                    clamp=clamp,
                                                    max_splits=max_splits,
-                                                   min_split_size=min_split_size,
-                                                   leaf_type=leaf_type)
+                                                   min_split_size=min_split_size
+                                                   )
 
     def forward(self, x, c=[], rev=False):
         x, self.jac = self.tree.forward(x[0], rev=rev)
